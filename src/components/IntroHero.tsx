@@ -47,13 +47,13 @@ export default function IntroHero() {
         className="hero-liquid-copy"
         variant="subtle"
       >
-        <p className="font-mono text-sm uppercase tracking-[0.28em] text-cyan-200 md:text-base">
-          Thakur Shree DPS College of Engineering and Management
-        </p>
+        <p className="font-mono text-base uppercase tracking-[0.28em] text-cyan-200 md:text-lg">
+  Thakur Shree DPS College of Engineering and Management
+</p>
                 <h1 className="scan-heading mt-5 max-w-6xl text-5xl font-black leading-[0.86] tracking-[-0.08em] text-white md:text-7xl lg:text-9xl">
           <span className="scan-text-dim">Internal Hackathon</span>
           <span className="scan-text-neon" aria-hidden="true">
-            Internal Hackathon
+            Internal Hackathon 
           </span>
           <span className="scan-bar" aria-hidden="true" />
         </h1>
@@ -120,9 +120,6 @@ export default function IntroHero() {
             }
           }
         `}</style>
-        <h2 className="mt-6 text-2xl font-light tracking-[0.18em] text-white/80 md:text-4xl">
-          SIH Team Selection
-        </h2>
       </LiquidGlass>
       <div className="absolute bottom-10 flex flex-col items-center gap-3 text-xs uppercase tracking-[0.24em] text-white/45">
         <span className="scroll-indicator" />

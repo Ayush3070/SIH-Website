@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 export default function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   const [visible, setVisible] = useState(true);
   const [progress, setProgress] = useState(0);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(1);
 
   useEffect(() => {
     let startTime = performance.now();
