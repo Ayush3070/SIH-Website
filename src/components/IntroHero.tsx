@@ -50,9 +50,76 @@ export default function IntroHero() {
         <p className="font-mono text-sm uppercase tracking-[0.28em] text-cyan-200 md:text-base">
           Thakur Shree DPS College of Engineering and Management
         </p>
-        <h1 className="mt-5 max-w-6xl text-5xl font-black leading-[0.86] tracking-[-0.08em] text-white md:text-7xl lg:text-9xl">
-          Internal Hackathon
+                <h1 className="scan-heading mt-5 max-w-6xl text-5xl font-black leading-[0.86] tracking-[-0.08em] text-white md:text-7xl lg:text-9xl">
+          <span className="scan-text-dim">Internal Hackathon</span>
+          <span className="scan-text-neon" aria-hidden="true">
+            Internal Hackathon
+          </span>
+          <span className="scan-bar" aria-hidden="true" />
         </h1>
+        <style>{`
+          .scan-heading {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+          }
+
+          .scan-heading .scan-text-dim {
+            color: rgba(94, 85, 85, 0.14);
+          }
+
+          .scan-heading .scan-text-neon {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            color:rgba(225, 246, 40, 0.9),
+            text-shadow:
+              0 0 12px rgba(0, 0, 0, 0.9),
+              0 0 30px rgba(6, 6, 6, 0.55),
+              0 0 64px rgb(46, 46, 46);
+            -webkit-clip-path: inset(0 100% 0 0);
+            clip-path: inset(0 100% 0 0);
+            animation: scan-reveal 2.5s cubic-bezier(0.45, 0, 0.55, 1) 1s infinite;
+          }
+
+          .scan-heading .scan-bar {
+            position: absolute;
+            top: -8%;
+            bottom: -8%;
+            width: 3px;
+            border-radius: 999px;
+            background:rgb(27, 28, 28);
+            box-shadow:
+              0 0 15px 2px rgba(255, 255, 255, 0.9),
+              0 0 34px 7px rgba(231, 229, 125, 0.45);
+            z-index: 10;
+            left: -5%;
+            opacity: 0;
+            animation: scan-sweep 2.5s cubic-bezier(0.45, 0, 0.55, 1) 1s infinite;
+          }
+
+          @keyframes scan-sweep {
+            0% { left: -5%; opacity: 0; }
+            4% { opacity: 1; }
+            92% { opacity: 1; }
+            100% { left: 103%; opacity: 0; }
+          }
+
+          @keyframes scan-reveal {
+            0% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); }
+            100% { -webkit-clip-path: inset(0 0% 0 0); clip-path: inset(0 0% 0 0); }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .scan-heading .scan-text-neon,
+            .scan-heading .scan-bar {
+              animation: none;
+            }
+            .scan-heading .scan-bar {
+              opacity: 0;
+            }
+          }
+        `}</style>
         <h2 className="mt-6 text-2xl font-light tracking-[0.18em] text-white/80 md:text-4xl">
           SIH Team Selection
         </h2>
