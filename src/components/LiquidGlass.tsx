@@ -10,19 +10,19 @@ import {
 
 const GLASS_PRESETS = {
   subtle: {
-    backgroundOpacity: 0.08,
+    backgroundOpacity: 0.25,
     saturation: 1.1,
     blur: 3,
     distortionScale: 18,
   },
   default: {
-    backgroundOpacity: 0.18,
+    backgroundOpacity: 0.35,
     saturation: 1.25,
     blur: 7,
     distortionScale: 34,
   },
   bold: {
-    backgroundOpacity: 0.28,
+    backgroundOpacity: 0.45,
     saturation: 1.45,
     blur: 12,
     distortionScale: 54,
@@ -65,9 +65,9 @@ export default function LiquidGlass({
         <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <radialGradient id="glassGrad-${uniqueId}" cx="45%" cy="30%" r="80%">
-              <stop offset="0%" stop-color="rgb(235,235,235)"/>
-              <stop offset="45%" stop-color="rgb(168,168,168)"/>
-              <stop offset="100%" stop-color="rgb(118,118,118)"/>
+              <stop offset="0%" stop-color="rgb(35,35,35)"/>
+              <stop offset="45%" stop-color="rgb(18,18,18)"/>
+              <stop offset="100%" stop-color="rgb(5,5,5)"/>
             </radialGradient>
           </defs>
           <rect width="100%" height="100%" fill="url(#glassGrad-${uniqueId})" rx="${borderRadius}"/>

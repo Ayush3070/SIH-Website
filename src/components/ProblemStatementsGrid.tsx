@@ -34,15 +34,15 @@ export default function ProblemStatementsGrid() {
   return (
     <>
       <div className="mx-auto w-full max-w-7xl px-5 py-24 md:px-8 md:py-32">
-        <header className="glass-panel mb-8 p-6 md:mb-10 md:p-9">
+        <header className="glass-panel mb-8 p-6 md:mb-10 md:p-9 text-center">
           <p className="font-mono text-xs uppercase tracking-[0.32em] text-cyan-200">
             SIH Internal Selection
           </p>
-          <div className="mt-4 grid gap-5 lg:grid-cols-[1fr_0.55fr] lg:items-end">
+          <div className="mt-4">
             <h2 className="text-4xl font-black leading-none tracking-[-0.06em] text-white md:text-6xl lg:text-7xl">
               Problem Statements
             </h2>
-            <p className="text-sm leading-7 text-white/62 md:text-base">
+            <p className="mt-4 text-sm leading-7 text-white/62 md:text-base">
               Choose a challenge, form a focused team, and prepare a prototype
               plan for the college-level SIH selection round.
             </p>
@@ -68,7 +68,7 @@ export default function ProblemStatementsGrid() {
               tabIndex={0}
               variant="default"
             >
-              <div className="mb-5 flex items-start justify-between gap-4">
+              <div className="mb-5 flex items-center justify-between gap-4">
                 <span className="font-mono text-xs font-bold tracking-[0.18em] text-cyan-200">
                   {statement.id}
                 </span>
