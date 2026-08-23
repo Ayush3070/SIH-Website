@@ -51,9 +51,9 @@ export default function IntroHero() {
   Thakur Shree DPS College of Engineering and Management
 </p>
                 <h1 className="scan-heading mt-5 max-w-6xl text-5xl font-black leading-[0.86] tracking-[-0.08em] text-white md:text-7xl lg:text-9xl">
-          <span className="scan-text-dim">Internal Hackathon</span>
+          <span className="scan-text-dim">Internal Hackathon 2026</span>
           <span className="scan-text-neon" aria-hidden="true">
-            Internal Hackathon 
+            Internal Hackathon 2026
           </span>
           <span className="scan-bar" aria-hidden="true" />
         </h1>

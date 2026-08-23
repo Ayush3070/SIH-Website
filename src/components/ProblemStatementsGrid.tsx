@@ -3,12 +3,6 @@ import type { ProblemStatement } from "../data/problemStatements";
 import { useEffect, useState } from "react";
 import LiquidGlass from "./LiquidGlass";
 
-const difficultyStyles = {
-  Easy: "border-emerald-300/30 text-emerald-200",
-  Medium: "border-cyan-300/30 text-cyan-200",
-  Hard: "border-rose-300/30 text-rose-200",
-};
-
 export default function ProblemStatementsGrid() {
   const [selectedStatement, setSelectedStatement] =
     useState<ProblemStatement | null>(null);
@@ -52,10 +46,10 @@ export default function ProblemStatementsGrid() {
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {problemStatements.map((statement, index) => (
             <LiquidGlass
-              aria-label={`View detailed problem statement for ${statement.title}`}
+              aria-label={`View detailed problem statement for ${statement["Problem Statement Title"]}`}
               className="glass-card group min-h-[255px] p-5 md:p-6"
               borderRadius={26}
-              key={statement.id}
+              key={statement["PS.Id"]}
               onClick={() => setSelectedStatement(statement)}
               onKeyDown={(event) => {
                 if (event.key === "Enter" || event.key === " ") {
@@ -70,24 +64,20 @@ export default function ProblemStatementsGrid() {
             >
               <div className="mb-5 flex items-center justify-between gap-4">
                 <span className="font-mono text-xs font-bold tracking-[0.18em] text-cyan-200">
-                  {statement.id}
+                  PS.No. {statement["PS.No."]}
                 </span>
-                <span
-                  className={`rounded-full border px-3 py-1 font-mono text-[10px] uppercase tracking-[0.16em] ${
-                    difficultyStyles[statement.difficulty]
-                  }`}
-                >
-                  {statement.difficulty}
+                <span className="rounded-full border border-cyan-300/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-cyan-200">
+                  {statement.Category}
                 </span>
               </div>
               <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.22em] text-white/42">
-                {statement.domain}
+                {statement.Theme}
               </p>
               <h3 className="mb-4 text-2xl font-extrabold leading-tight tracking-[-0.035em] text-white">
-                {statement.title}
+                {statement["Problem Statement Title"]}
               </h3>
-              <p className="text-sm leading-7 text-white/60">
-                {statement.description}
+              <p className="font-mono text-xs tracking-[0.18em] text-white/45">
+                {statement["PS.Id"]}
               </p>
               <div className="mt-6 h-px w-full bg-gradient-to-r from-cyan-200/0 via-cyan-200/35 to-fuchsia-300/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </LiquidGlass>
@@ -137,20 +127,20 @@ function ProblemStatementDialog({
         </button>
 
         <div className="problem-dialog-eyebrow">
-          <span>{statement.id}</span>
-          <span>{statement.domain}</span>
-          <span>{statement.difficulty}</span>
+          <span>PS.No. {statement["PS.No."]}</span>
+          <span>{statement.Theme}</span>
+          <span>{statement["PS.Id"]}</span>
         </div>
 
-        <h3 id="problem-dialog-title">{statement.title}</h3>
+        <h3 id="problem-dialog-title">{statement["Problem Statement Title"]}</h3>
 
         <section>
-          <h4>Detailed Problem Statement</h4>
-          <p>
-            {statement.description} The team must identify the intended users,
-            define the real-world workflow, and build a prototype that proves
-            the proposed solution can work in a practical deployment scenario.
-          </p>
+          <h4>Details</h4>
+          <div className="problem-dialog-grid">
+            <p>Theme: {statement.Theme}</p>
+            <p>Category: {statement.Category}</p>
+            <p>PS ID: {statement["PS.Id"]}</p>
+          </div>
         </section>
 
         <section>
