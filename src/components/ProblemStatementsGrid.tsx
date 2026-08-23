@@ -144,20 +144,15 @@ function ProblemStatementDialog({
         </section>
 
         <section>
-          <h4>Expected Prototype</h4>
-          <div className="problem-dialog-grid">
-            <p>Working interface or dashboard for the primary user journey.</p>
-            <p>Core automation, prediction, analysis, or decision-support logic.</p>
-            <p>Clear output, report, alert, recommendation, or measurable result.</p>
-          </div>
-        </section>
-
-        <section>
-          <h4>Evaluation Focus</h4>
           <p>
-            Selection should emphasize feasibility, technical depth, usability,
-            impact, and clarity of execution. The best teams should show a
-            buildable implementation plan instead of only presenting an idea.
+            <a
+              href="https://sih.gov.in/sih2026PS"
+              rel="noreferrer"
+              style={{ color: "inherit", textDecoration: "none" }}
+              target="_blank"
+            >
+              CLICK HERE
+            </a>
           </p>
         </section>
       </article>
