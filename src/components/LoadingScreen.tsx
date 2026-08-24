@@ -43,7 +43,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
     >
       <div className="relative z-10 flex flex-col items-center gap-6 pointer-events-none">
         <div className="font-mono text-xs uppercase tracking-[0.4em] text-white/40">
-          SIH Internal Selection
+          SIH Internal Hackathon
         </div>
 
         <div className="relative w-72 h-72">

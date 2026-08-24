@@ -6,18 +6,43 @@ export default function IntroHero() {
 
   useEffect(() => {
     let frameId = 0;
+    const glass = heroRef.current?.querySelector<HTMLElement>(".liquid-glass");
+    const glassContent = heroRef.current?.querySelector<HTMLElement>(".liquid-glass-content");
+    const compactQuery = window.matchMedia("(max-width: 1024px), (pointer: coarse)");
 
     const updateHeroPosition = () => {
       frameId = 0;
       const hero = heroRef.current;
       if (!hero) return;
 
+      if (compactQuery.matches) {
+        hero.style.transform = "";
+        hero.style.opacity = "";
+        hero.style.visibility = "visible";
+        return;
+      }
+
       const scrollRange = window.innerHeight * 1.2;
       const progress = Math.min(window.scrollY / scrollRange, 1);
       const easedProgress = 1 - Math.pow(1 - progress, 3);
+      const fade = 1 - easedProgress;
 
       hero.style.transform = `translate3d(0, ${easedProgress * -72}vh, 0) scale(${1 - easedProgress * 0.08})`;
-      hero.style.opacity = `${1 - easedProgress * 0.72}`;
+      hero.style.opacity = `${fade}`;
+      hero.style.visibility = progress >= 0.95 ? "hidden" : "visible";
+
+      if (glass) {
+        glass.style.opacity = `${fade}`;
+        if (progress > 0.5) {
+          glass.style.setProperty("backdrop-filter", "none");
+          glass.style.setProperty("-webkit-backdrop-filter", "none");
+        } else {
+          glass.style.setProperty("backdrop-filter", "");
+          glass.style.setProperty("-webkit-backdrop-filter", "");
+        }
+      }
+
+      if (glassContent) glassContent.style.opacity = `${fade}`;
     };
 
     const requestUpdate = () => {
@@ -27,18 +52,20 @@ export default function IntroHero() {
 
     updateHeroPosition();
     window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("touchmove", requestUpdate, { passive: true });
     window.addEventListener("resize", requestUpdate);
 
     return () => {
       if (frameId) window.cancelAnimationFrame(frameId);
       window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("touchmove", requestUpdate);
       window.removeEventListener("resize", requestUpdate);
     };
   }, []);
 
   return (
     <section
-      className="fixed inset-0 z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center pointer-events-none"
+      className="intro-hero fixed inset-0 z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center pointer-events-none"
       ref={heroRef}
     >
       <div className="hero-orb" />

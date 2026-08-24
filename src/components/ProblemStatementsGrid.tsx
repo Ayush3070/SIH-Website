@@ -30,7 +30,7 @@ export default function ProblemStatementsGrid() {
       <div className="mx-auto w-full max-w-7xl px-5 py-24 md:px-8 md:py-32">
         <header className="glass-panel mb-8 p-6 md:mb-10 md:p-9 text-center">
           <p className="font-mono text-xs uppercase tracking-[0.32em] text-cyan-200">
-            SIH Internal Selection
+            SIH Internal Hackathon
           </p>
           <div className="mt-4">
             <h2 className="text-4xl font-black leading-none tracking-[-0.06em] text-white md:text-6xl lg:text-7xl">
