@@ -1,81 +1,113 @@
-# SIH Website — Internal Hackathon Portal
+<div align="center">
 
-A dark-themed, single-page portal for the **Internal Hackathon** conducted for **SIH Team Selection** at **Thakur Shree DPS College of Engineering and Management**. It features a liquid-glass hero with a neon scan-text effect, an interactive 3D portal background, and a browsable grid of problem statements with detailed views.
+<img src="public/tsdcem.png" alt="TSDCEM Logo" width="110"/>
 
-## Features
+# 🏆 Internal Hackathon 2026 — Portal
 
-- **Loading Screen** — minimal progress-ring animation on first load.
-- **3D Portal Background** — real-time WebGL scene rendered with [Three.js](https://threejs.org/), enhanced with simplex noise.
-- **Liquid Glass Hero** — glassmorphism card using an SVG displacement-map filter (`feDisplacementMap`) for a refractive glass look.
-- **Neon Scan Text Effect** — "Internal Hackathon" heading illuminated by a glowing scanner bar sweeping left → right; fully responsive and respects `prefers-reduced-motion`.
-- **Problem Statements Grid** — animated, accessible cards (keyboard operable) with difficulty badges and a modal dialog showing full problem details.
-- **Scroll Interactions** — hero parallax/fade on scroll, college logo fade-out.
+**Thakur Shree DPS College of Engineering and Management**
 
-## Tech Stack
+*A dark-themed, single-page portal built for the Smart India Hackathon **Internal Team Selection Round***
+
+<img src="public/sih_logo.png" alt="Ministry of Education | AICTE | MoE's Innovation Cell | Smart India Hackathon 2026" width="420"/>
+
+<br>
+
+[![🚀 Live Demo](https://img.shields.io/badge/🚀_Live_Demo-tsdcem--internal--hackathon.vercel.app-00C7B7?style=for-the-badge&logo=vercel&logoColor=white)](https://tsdcem-internal-hackathon.vercel.app)
+
+[![React 19](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-7.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite 8](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Three.js](https://img.shields.io/badge/Three.js-WebGL-000000?style=flat-square&logo=threedotjs&logoColor=white)](https://threejs.org/)
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://tsdcem-internal-hackathon.vercel.app)
+
+---
+
+</div>
+
+## ✨ Highlights
+
+> A glassmorphism hero with a neon scanner sweep, a real-time fluid-gradient WebGL backdrop, and a fully browsable grid of official SIH problem statements — all in one immersive page.
+
+| | |
+| --- | --- |
+| 🎬 **Cinematic Loading Screen** | Minimal progress-ring animation on first load |
+| 🌊 **Fluid Gradient Engine** | Real-time WebGL fluid backdrop enhanced with simplex noise |
+| 🧊 **Liquid Glass Hero** | True refractive glass via SVG `feDisplacementMap` + backdrop blur |
+| ⚡ **Neon Scan Text Effect** | Glowing scanner bar sweeps across the headline; respects `prefers-reduced-motion` |
+| 🧩 **Problem Statements Grid** | Animated, keyboard-accessible cards with difficulty badges & detail dialogs |
+| 🏛️ **Official Branding** | TSDCEM crest + MoE / AICTE / Innovation Cell / SIH 2026 logo strip |
+| 📜 **Scroll Interactions** | Hero parallax & fade, logo fade-out on scroll |
+
+## 🛠 Tech Stack
 
 | Layer | Technology |
 | --- | --- |
-| UI | React 19 + TypeScript |
-| Build | Vite 8 |
-| 3D / Graphics | Three.js, simplex-noise |
-| Styling | Hand-written CSS (custom utilities + component styles) |
+| 🖥 UI | **React 19** + **TypeScript** |
+| ⚙️ Build | **Vite 8** |
+| 🎨 Graphics | **Three.js**, **simplex-noise** |
+| 💅 Styling | Hand-written CSS — custom utilities & component styles |
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js ≥ 18
-- npm ≥ 9
-
-### Install & Run
+## 🚀 Getting Started
 
 ```bash
-# install dependencies
+# 1️⃣ install dependencies
 npm install
 
-# start dev server
+# 2️⃣ start the dev server
 npm run dev
 
-# production build (outputs to dist/)
+# 3️⃣ production build (outputs to dist/)
 npm run build
 ```
 
-## Project Structure
+> **Prerequisites:** Node.js ≥ 18 · npm ≥ 9
+
+## 📂 Project Structure
 
 ```
 ├── index.html                  # App entry point
 ├── public/
-│   └── tsdcem.png              # College logo
+│   ├── tsdcem.png              # College crest
+│   └── sih_logo.png            # MoE | AICTE | Innovation Cell | SIH 2026 strip
 └── src/
     ├── main.tsx                # React root
-    ├── App.tsx                 # Layout: background, logo, hero, grid
+    ├── App.tsx                 # Layout: background, logos, hero, grid
     ├── index.css               # Global styles & utility classes
     ├── data/
     │   └── problemStatements.ts
     └── components/
         ├── LoadingScreen.tsx           # Initial progress-ring loader
-        ├── ThreePortalBackground.tsx   # Three.js WebGL backdrop
+        ├── FluidGradientEngine.tsx     # Real-time WebGL fluid backdrop
         ├── LiquidGlass.tsx             # Reusable SVG-displacement glass card
         ├── IntroHero.tsx               # Hero banner + scan text effect
         └── ProblemStatementsGrid.tsx   # Cards grid + detail dialog
 ```
 
-## Component Overview
+## 🧠 Component Overview
 
 | Component | Purpose |
 | --- | --- |
-| `LoadingScreen` | Full-screen loader with thin progress ring shown for the first ~2.7 s. |
-| `ThreePortalBackground` | Fixed WebGL canvas behind all content. |
-| `LiquidGlass` | Generic wrapper providing refraction/backdrop-blur glass styling via CSS variables and SVG filters. |
-| `IntroHero` | College name, "Internal Hackathon" headline with scan effect, scroll-linked fade. |
-| `ProblemStatementsGrid` | Filterable list of problem statements; click/Enter opens a dialog with description, expected prototype, and evaluation focus. |
+| `LoadingScreen` | Full-screen loader with a thin progress ring shown for the first ~2.7 s |
+| `FluidGradientEngine` | Fixed WebGL canvas rendering the animated fluid gradient behind all content |
+| `LiquidGlass` | Generic wrapper providing refraction/backdrop-blur glass styling via CSS variables & SVG filters |
+| `IntroHero` | College name, **Internal Hackathon 2026** headline with scan effect, scroll-linked fade |
+| `ProblemStatementsGrid` | Filterable problem statements; click/Enter opens a dialog with description, expected prototype & evaluation focus |
 
-## Accessibility
+## ♿ Accessibility
 
-- Problem-statement cards are focusable with `role="button"` and Enter/Space support.
-- Dialog closes on `Escape` and locks body scroll while open.
-- Scan-text animation is disabled under `prefers-reduced-motion`.
+- ✅ Problem-statement cards are focusable with `role="button"` and Enter/Space support
+- ✅ Dialog closes on `Escape` and locks body scroll while open
+- ✅ Scan-text animation is disabled under `prefers-reduced-motion`
+- ✅ Responsive layout for desktop, tablet & mobile
 
-## License
+---
 
-ISC © TSDCEM
+<div align="center">
+
+**[🌐 View Live →](https://tsdcem-internal-hackathon.vercel.app)**
+
+Made with 💙 by the Web Dev Team @ **TSDCEM**
+
+ISC © Thakur Shree DPS College of Engineering and Management
+
+</div>
