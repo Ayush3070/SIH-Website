@@ -92,18 +92,18 @@ export default function IntroHero() {
           }
 
           .scan-heading .scan-text-dim {
-            color: rgba(94, 85, 85, 0.14);
+            color: rgba(255, 255, 255, 0.98);
           }
 
           .scan-heading .scan-text-neon {
             position: absolute;
             inset: 0;
             pointer-events: none;
-            color:rgba(225, 246, 40, 0.9),
+            color: rgba(255, 255, 255, 0.98);
             text-shadow:
-              0 0 12px rgba(0, 0, 0, 0.9),
-              0 0 30px rgba(6, 6, 6, 0.55),
-              0 0 64px rgb(46, 46, 46);
+              0 2px 10px rgba(0, 0, 0, 0.5),
+              0 0 18px rgba(255, 255, 255, 0.55),
+              0 0 42px rgba(165, 243, 252, 0.3);
             -webkit-clip-path: inset(0 100% 0 0);
             clip-path: inset(0 100% 0 0);
             animation: scan-reveal 2.5s cubic-bezier(0.45, 0, 0.55, 1) 1s infinite;
@@ -115,7 +115,7 @@ export default function IntroHero() {
             bottom: -8%;
             width: 3px;
             border-radius: 999px;
-            background:rgb(27, 28, 28);
+            background: rgba(255, 255, 255, 0.85);
             box-shadow:
               0 0 15px 2px rgba(255, 255, 255, 0.9),
               0 0 34px 7px rgba(231, 229, 125, 0.45);

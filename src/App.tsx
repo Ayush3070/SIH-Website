@@ -7,6 +7,7 @@ import LoadingScreen from "./components/LoadingScreen";
 export default function App() {
   const [loaded, setLoaded] = useState(false);
   const logoRef = useRef<HTMLDivElement>(null);
+  const sihLogoRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoaded(true), 2700);
@@ -19,19 +20,24 @@ export default function App() {
 
     const updateLogoFade = () => {
       frameId = 0;
-      const logo = logoRef.current;
-      if (!logo) return;
 
-      if (compactQuery.matches) {
-        logo.style.opacity = "";
-        logo.style.visibility = "visible";
-        return;
-      }
+      const applyFade = (logo: HTMLDivElement | null) => {
+        if (!logo) return;
 
-      const fadeRange = window.innerHeight * 0.45;
-      const progress = Math.min(window.scrollY / fadeRange, 1);
-      logo.style.opacity = `${1 - progress}`;
-      logo.style.visibility = progress >= 1 ? "hidden" : "visible";
+        if (compactQuery.matches) {
+          logo.style.opacity = "";
+          logo.style.visibility = "visible";
+          return;
+        }
+
+        const fadeRange = window.innerHeight * 0.45;
+        const progress = Math.min(window.scrollY / fadeRange, 1);
+        logo.style.opacity = `${1 - progress}`;
+        logo.style.visibility = progress >= 1 ? "hidden" : "visible";
+      };
+
+      applyFade(logoRef.current);
+      applyFade(sihLogoRef.current);
     };
 
     const requestUpdate = () => {
@@ -68,6 +74,9 @@ export default function App() {
           className="h-10 w-auto md:h-12"
           style={{ filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.3))" }}
         />
+      </div>
+      <div ref={sihLogoRef} className="sih-logo pointer-events-auto">
+        <img src="/sih_logo.png" alt="SIH Logo" />
       </div>
       <IntroHero />
       <section className="absolute left-0 top-[120vh] z-20 w-full pointer-events-auto">

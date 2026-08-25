@@ -55,6 +55,21 @@ textarea {
   animation: breathe 7s ease-in-out infinite;
 }
 
+.sih-logo {
+  position: fixed;
+  top: 3.25rem;
+  right: 1.25rem;
+  z-index: 30;
+  transition: opacity 120ms linear;
+}
+
+.sih-logo img {
+  display: block;
+  width: clamp(260px, 37vw, 560px);
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
 .hero-liquid-copy {
   will-change: transform, opacity;
 }
@@ -554,6 +569,10 @@ textarea {
   }
 
   .tsdcem-logo {
+    position: absolute;
+  }
+
+  .sih-logo {
     position: absolute;
   }
 
