@@ -572,6 +572,11 @@ textarea {
     position: absolute;
   }
 
+  .tsdcem-logo img {
+    width: 110px;
+    height: auto;
+  }
+
   .sih-logo {
     position: absolute;
   }
