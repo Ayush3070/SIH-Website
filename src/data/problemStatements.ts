@@ -9,7 +9,7 @@ export type ProblemStatement = {
 export const problemStatements: ProblemStatement[] = [
   {
     "PS.No.": "1",
-    Theme: "Miscellaneous",
+    Theme: "Smart Automation",
     "PS.Id": "SIH26044",
     Category: "Software",
     "Problem Statement Title":
@@ -17,7 +17,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "2",
-    Theme: "Miscellaneous",
+    Theme: "Smart Automation",
     "PS.Id": "SIH26076",
     Category: "Software",
     "Problem Statement Title":
@@ -25,7 +25,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "3",
-    Theme: "Smart Automation",
+    Theme: "MedTech / BioTech / HealthTech",
     "PS.Id": "SIH26047",
     Category: "Software",
     "Problem Statement Title": "Patient Case-Taking Software",
@@ -40,7 +40,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "5",
-    Theme: "Disaster Management",
+    Theme: "Smart Automation",
     "PS.Id": "SIH26060",
     Category: "Software",
     "Problem Statement Title":
@@ -56,7 +56,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "7",
-    Theme: "Blockchain & Cybersecurity",
+    Theme: "Smart Automation",
     "PS.Id": "SIH26019",
     Category: "Software",
     "Problem Statement Title":
@@ -112,7 +112,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "14",
-    Theme: "Agriculture, FoodTech & Rural Development",
+    Theme: "MedTech / BioTech / HealthTech",
     "PS.Id": "SIH26128",
     Category: "Software",
     "Problem Statement Title":
@@ -120,7 +120,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "15",
-    Theme: "Space Technology",
+    Theme: "Smart Education",
     "PS.Id": "SIH26063",
     Category: "Software",
     "Problem Statement Title":
@@ -128,7 +128,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "16",
-    Theme: "Space Technology",
+    Theme: "MedTech / BioTech / HealthTech",
     "PS.Id": "SIH26003",
     Category: "Software",
     "Problem Statement Title":
@@ -136,7 +136,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "17",
-    Theme: "Robotics and Drones",
+    Theme: "Agriculture, FoodTech & Rural Development",
     "PS.Id": "SIH26014",
     Category: "Software",
     "Problem Statement Title":
@@ -144,7 +144,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "18",
-    Theme: "Robotics and Drones",
+    Theme: "Smart Automation",
     "PS.Id": "SIH26123",
     Category: "Software",
     "Problem Statement Title":
@@ -152,7 +152,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "19",
-    Theme: "Transportation & Logistics",
+    Theme: "Miscellaneous",
     "PS.Id": "SIH26036",
     Category: "Software",
     "Problem Statement Title":
@@ -160,7 +160,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "20",
-    Theme: "Fitness & Sports",
+    Theme: "Smart Automation",
     "PS.Id": "SIH26124",
     Category: "Software",
     "Problem Statement Title":
@@ -168,7 +168,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "21",
-    Theme: "Heritage & Culture",
+    Theme: "Smart Automation",
     "PS.Id": "SIH26032",
     Category: "Software",
     "Problem Statement Title":
@@ -176,7 +176,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "22",
-    Theme: "Heritage & Culture",
+    Theme: "Smart Education",
     "PS.Id": "SIH26096",
     Category: "Hardware",
     "Problem Statement Title":
@@ -184,7 +184,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "23",
-    Theme: "Travel & Tourism",
+    Theme: "Smart Automation",
     "PS.Id": "SIH26056",
     Category: "Software",
     "Problem Statement Title":
@@ -192,7 +192,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "24",
-    Theme: "Smart Vehicles",
+    Theme: "Miscellaneous",
     "PS.Id": "SIH26035",
     Category: "Software",
     "Problem Statement Title":
@@ -200,7 +200,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "25",
-    Theme: "Smart Vehicles",
+    Theme: "Agriculture, FoodTech & Rural Development",
     "PS.Id": "SIH26005",
     Category: "Hardware",
     "Problem Statement Title":
@@ -208,7 +208,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "26",
-    Theme: "Renewable / Sustainable Energy",
+    Theme: "Clean & Green Technology",
     "PS.Id": "SIH26040",
     Category: "Hardware",
     "Problem Statement Title":
@@ -216,7 +216,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "27",
-    Theme: "Clean & Green Technology",
+    Theme: "MedTech / BioTech / HealthTech",
     "PS.Id": "SIH26038",
     Category: "Software",
     "Problem Statement Title":
@@ -224,7 +224,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "28",
-    Theme: "Toys & Games",
+    Theme: "Smart Automation",
     "PS.Id": "SIH26062",
     Category: "Software",
     "Problem Statement Title":
@@ -232,7 +232,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "29",
-    Theme: "Toys & Games",
+    Theme: "MedTech / BioTech / HealthTech",
     "PS.Id": "SIH26045",
     Category: "Software",
     "Problem Statement Title":
@@ -240,7 +240,7 @@ export const problemStatements: ProblemStatement[] = [
   },
   {
     "PS.No.": "30",
-    Theme: "Student Innovation",
+    Theme: "AICTE",
     "PS.Id": "AICTE",
     Category: "Software/Hardware",
     "Problem Statement Title":
